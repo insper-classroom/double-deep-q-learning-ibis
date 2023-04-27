@@ -36,8 +36,9 @@ A principal ideia do Double Deep Q-Learning é utilizar duas redes para selecion
     Para cada N episódios:
           Para cada passo:
                 Utiliza uma das redes para avaliar as ações e outra para escolher a ação.
+                
           A cada X episódios:
-                Atualiza weights da rede de avaliação com os da rede de seleção.
+                Iguala weights das rede de avaliação com os da rede de seleção.
 
 
 
