@@ -68,7 +68,7 @@ Primeiramente, foi feita a implementação do algoritmo Double Deep Q-Learning, 
 
 Em seguida o treinamento do Cart Pole:
 
-![](imgs/DDQL_CartPole-V1.png)
+![](imgs/DDQL_CartPole-v1.png)
 
 
 Comparando com DQN (Deep Q-Learning), o DDQN (Double Deep Q-Learning) apresentou resultados melhores, tanto no Cart Pole quanto no Lunar Lander, mas não tão superiores quanto ao desempenho aumentando na média e no maximo e diminuindo no mínimo, talvez isso se deva ao treinamento contar apenas com 1000 episodios. Como visto no artigo o DQN tende a diminuir seus rewards apos um periodo enquanto o DDQL tende a mante-los mesmo apos o reward maximo durante o aprendizado. Uma caracteristica que podemos observar na comparação do Lunar Lander é que o o DDQN é mais estavel durante o aprendizado.
