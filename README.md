@@ -14,10 +14,6 @@
 
 A intenção do projeto é o estudo e a implementação do algoritmo Double Deep Q-Learning para o treinamento de agentes em alguns ambientes. Para isso, utilizou-se como base o artigo publicado por van Hasselt, Guez e Silver [1].
 
-### Arquivos do projeto
-
-O projeto foi divido nos seguintes arquivos:
-
 
 
 ### Questionário do projeto
@@ -81,14 +77,6 @@ Além disso, uma tentativa de treinamento pode ser vista abaixo.
 **7. Você conseguiu o comportamento esperado? Justifique a sua resposta. Em caso negativo, na opinião do grupo, o que faltou implementar para conseguir o comportamento esperado?**
 
 Sim, a implementação do DDQN apresentou resultados melhores que os da implementação DQN, podendo ser visto esses resultados nos gráficos.
-
-### Implementação e análise
-
-#### Lunar Lander
-
-#### Cart Pole
-
-#### Atari
 
 ### Referências
 
