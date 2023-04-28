@@ -35,7 +35,9 @@ A principal ideia do Double Deep Q-Learning é utilizar duas redes para selecion
     Cria-se duas redes neurais inicialmente iguais.
     Para cada N episódios:
           Para cada passo:
-                Utiliza uma das redes para avaliar as ações e outra para escolher a ação.
+                Utiliza uma das redes para escolher a ação e outra para avaliar as ações.
+
+                chama a função de loss e atualiza os pesos da rede de seleção.
                 
           A cada X episódios:
                 Iguala weights das rede de avaliação com os da rede de seleção.
@@ -59,7 +61,22 @@ Para realizar essas análises, além de uma análise matemática, foi feita uma 
 
 **6. Implemente o algoritmo Double Deep Q-Learning e valide nos seguintes ambientes: Cart Pole e Lunar Lander.**
 
-Análise feita após o questionário.
+Primeiramente, foi feita a implementação do algoritmo Double Deep Q-Learning, e para isso, foi utilizado como base a implementação do Deep Q-Learning feita em sala de aula. A implementação do Double Deep Q-Learning pode ser vista no arquivo `agents.py`. Para validar o algoritmo, foram utilizados os ambientes Cart Pole e Lunar Lander, e os resultados podem ser vistos nos gráficos abaixo.
+
+![](imgs/DDQN_vs_DQN.png)
+![](imgs/DDQN_vs_DQN_stats.png)
+
+Em seguida o treinamento do Cart Pole:
+
+![](imgs/DDQL_CartPole-V1.png)
+
+
+Comparando com DQN (Deep Q-Learning), o DDQN (Double Deep Q-Learning) apresentou resultados melhores, tanto no Cart Pole quanto no Lunar Lander, mas não tão superiores quanto ao desempenho aumentando na média e no maximo e diminuindo no mínimo, talvez isso se deva ao treinamento contar apenas com 1000 episodios. Como visto no artigo o DQN tende a diminuir seus rewards apos um periodo enquanto o DDQL tende a mante-los mesmo apos o reward maximo durante o aprendizado. Uma caracteristica que podemos observar na comparação do Lunar Lander é que o o DDQN é mais estavel durante o aprendizado.
+
+Finalmente, foi implementado uma rede neural convolucional para o DDQN, visando treinar ambientes do Atari. Infelizmente, não foi possível realizar o treinamento devido a limitações de hardware, mas a implementação também pode ser vista no arquivo `agents.py`.
+Além disso, uma tentativa de treinamento pode ser vista abaixo.
+
+![](DDQL_BreakoutNoFrameskip-v4.png)
 
 **7. Você conseguiu o comportamento esperado? Justifique a sua resposta. Em caso negativo, na opinião do grupo, o que faltou implementar para conseguir o comportamento esperado?**
 
